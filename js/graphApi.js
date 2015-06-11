@@ -26,14 +26,6 @@ $(document).ready(function(){
 	}
 });
 
-$(document).on('click','#loginBtn',function(e){
-	e.preventDefault();
-	login();
-});
-$(document).on('click','#signupBtn',function(e){
-	e.preventDefault();
-	signup();
-});
 $(document).on('click','#fbloginBtn',function(e){
 	e.preventDefault();
 	fblogin();
@@ -62,33 +54,7 @@ function indexView(){
 	
 }
 
-function login(){
-  Parse.User.logIn($('#username').val(),$('#password').val(),{
-	  success:function(data){
-	  	  alert("登入成功");
-          indexView();
-		  $('#fbImgView').append("<p>hello "+data.get("username")+", how about trying FB login ?</p>");
-	  },
-	  error:function(data,error){
-		  alert("登入失敗");
-	  }
-  });
-}
-function signup(){
-  var user = new Parse.User();
-  user.set("username",$('#username').val());
-  user.set("password",$('#password').val());
-  user.signUp(null,{
-	  success: function(user){
-		  alert("註冊成功");
-		  indexView();
-		  $('#fbImgView').append("<p>hello "+data.get("username")+", how about trying FB login ?</p>");
-	  },
-	  error: function(data,error){
-		  alert("註冊失敗");
-	  }
-  }); 
-}
+
 function logout(){
    Parse.User.logOut();
    FB.logout(function(response) {
