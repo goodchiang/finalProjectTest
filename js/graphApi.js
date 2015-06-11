@@ -42,7 +42,7 @@ function loginView(){
 	$('#loginView').show();
 	$('.notLogin').show();
 	//$('body').css("background-image","url(img/background.jpg)");
-	window.location = 'homepage.html' ;
+	//window.location = 'homepage.html' ;
 	$('#fbImgView').html('');
 	
 }
@@ -54,7 +54,7 @@ function indexView(){
 	$('#indexView').show();
 	$('#logoutBtn').show();
 	//$('body').css("background-image","url(img/index.jpg)");
-	window.location = 'homepage.html' ;
+	//window.location = 'homepage.html' ;
 }
 
 function logout(){
@@ -63,5 +63,5 @@ function logout(){
      // user is now logged out
    });
    loginView();	
-   window.location = 'homepage.html' ;
+   //window.location = 'homepage.html' ;
 }
