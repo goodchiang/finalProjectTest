@@ -1,0 +1,30 @@
+
+nav{
+	text-align: right;
+}
+
+body{
+	margin: 1em;
+}
+
+.login,.join{
+  margin-left: 0.5em;
+}
+
+.copyright{
+	text-align: center;
+	padding: 1em;
+	height: 10vh;
+	color: white;
+	background: #696969;
+}
+.carousel{
+	max-width: 70vw;
+	max-height:60vw;
+	margin-bottom: 3em;
+
+}
+.pics img{
+	max-width:20vw;
+	margin: 2em;
+}

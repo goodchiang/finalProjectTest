@@ -1,0 +1,135 @@
+<!doctype html>
+  <html class="container-fluid">
+      <head class="col-md-4" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content="http://goodchiang.github.io/facebook-startkit/" />
+          <meta property="og:title" content="Facebook Api / NCCU Web Programming" />
+          <meta property="og:description" content="Facebook Open Graph Test" />
+          <meta property="og:image" content="http://goodchiang.github.io/facebook-startkit/img/img.png" />
+      <!--https://developers.facebook.com/docs/reference/opengraph/object-type/article-->
+      
+          <meta charset="utf-8">
+          <title>來一起自拍！</title>
+          <meta name="viewport" content="width=device-width">
+
+            <!--匯入-->
+          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+          <link rel="stylesheet" href="css/homepage.css">
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+            <!--匯入結束-->
+
+          <!--LOGO放置處-->
+          <div class="logo col-md-4"></div>
+
+      </head>
+
+      <!--導覽列-->
+      <nav class="col-md-offset-4 col-md-8 navbar navbar-default"  role="navigation">
+          <!--moblie化-->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="homepage.html">來一起自拍</a>
+          </div>
+          <!--導覽列內容-->
+          <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+          			  <li><a href="articles.html">自拍教學</a></li>
+          			  <li><a href="beauties.html">美照分享</a></li>
+      		    </ul>
+              <!--登入鍵-->
+          	  <div class="joinbutton">
+          	 	    <button type="button" class="btn btn-default btn-xs navbar-btn login">登入 Log In</button>
+          	 	    <button type="button" class="btn btn-primary btn-xs navbar-btn join">加入會員 Join Us</button>
+          	  </div> 
+              <!--搜尋-->
+              <form class="navbar-form" role="search">
+          		    <div class="form-group">
+             			    <input type="text" class="form-control" id="searchinput" placeholder="Search">
+            			    <button type="submit" class="btn btn-default" id="searchbutton">Submit</button>
+           		    </div>
+  	          </form>
+          </div>
+      </nav>
+
+      <body>
+        	<article>
+             	<section>
+                  <div class=" col-md-8" id="hit">
+                      <div id="hit-carousel" class="carousel slide" data-ride="carousel">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                              <li data-target="#hit-carousel" data-slide-to="0" class="active"></li>
+                              <li data-target="#hit-carousel" data-slide-to="1"></li>
+                              <li data-target="#hit-carousel" data-slide-to="2"></li>
+                          </ol>
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner" role="listbox">
+                              <div class="item active">
+                                  <img src="carousel/pic1.jpg">
+                                  <div class="carousel-caption">
+                                  </div>
+                              </div>  
+                              <div class="item">
+                                  <img src="carousel/pic2.jpg">
+                                  <div class="carousel-caption">
+                                  </div>
+                              </div>  
+                              <div class="item">
+                                  <img src="carousel/pic3.jpg">
+                                  <div class="carousel-caption">
+                                  </div>
+                              </div>  
+                         </div>
+                         <!-- Controls -->
+                         <a class="left carousel-control" href="#hit-carousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                         </a>
+                         <a class="right carousel-control" href="#hit-carousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                         </a>
+
+                      </div>
+                  </div>
+                  <div class="col-md-4" id="hitinfo">
+                      <h3>測試</h3>
+                      <p>海洋即「海」和「洋」的總稱。地球的71%的面積被海洋覆蓋。總面積大約為3億5525萬5千平方公里。一般人們將這些占地球很大面積的鹹水水域稱為「洋」，大陸邊緣的水域被稱為「海」。少數地球以外的星體曾經也有海洋，一些尚有海洋或冰洋，如衛星土衛六、木衛二，一些行星如火星、金星曾經可能有過海洋或火漿洋。
+                      </p>
+                  </div>     
+             	</section>
+              <section>
+                  <div class="col-md-10">
+                      <div class="pics-nav">
+                          <ul class="nav nav-tabs">
+                              <li role="presentation"><a href="#">最新</a></li>
+                              <li role="presentation"><a href="#">熱門</a></li>
+                              <li role="presentation"><a href="#">地點</a></li>
+                          </ul>
+                      </div>
+                      <div class="pics">
+                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
+                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
+                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
+                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
+                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
+                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
+                      </div>
+                  </div>       
+                  
+              </section>
+      	  </article>
+      </body>
+
+      <!--版權-->
+      <footer>
+          <div class="col-md-12 copyright"> Copyright © 2015 WebPrograming Group 1. All Rights Reserved.</div>
+      </footer>
+
+  </html>
