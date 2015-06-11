@@ -34,6 +34,7 @@ $(document).on('click','#logoutBtn',function(e){
 	e.preventDefault();
 	logout();
 });
+
 function loginView(){
 	$('#logoutBtn').hide();
 	$('#indexView').hide();
@@ -44,6 +45,7 @@ function loginView(){
 	$('#fbImgView').html('');
 	
 }
+
 function indexView(){
 	$('#loginView').hide();
 	$('.notLogin').hide();
@@ -53,7 +55,6 @@ function indexView(){
 	$('body').css("background-image","url(img/index.jpg)");
 	
 }
-
 
 function logout(){
    Parse.User.logOut();
