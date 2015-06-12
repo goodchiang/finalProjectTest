@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+          <title>My Dashboard</title>
+          <meta name="viewport" content="width=device-width">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+          <link rel="stylesheet" href="css/index.css">
+          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+          <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+          <script src="js/keyNew.js"></script> 
+    </head>
+
+    <body>
+        <header>
+            <p class="notLogin">未登入</p>
+            <!-- <a id="loginBtn" href="logIn.html">登入</a> -->
+            <button id="fbloginBtn" class="btn btn-primary" type="submit">臉書登入</button>
+            <button id="logoutBtn" class="btn btn-danger">登出</button>
+            <a class="navbar-brand" href="index.html">來一起自拍</a>
+            <!--導覽列內容-->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><div id="fbPic"></div></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="upload.html">Upload</a></li>
+                </ul>                  
+            </div>      
+        </header>
+
+  
+
+
+
+        <script>
+          if (!Parse.User.current()){
+            alert("你尚未登入");
+            window.location = "index.html";
+          }
+        </script>
+
+    </body>
+</html>
