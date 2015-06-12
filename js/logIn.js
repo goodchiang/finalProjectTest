@@ -8,7 +8,7 @@ $(document).ready(function(){
 			         uid = response.authResponse.userID;
 			         accessToken = response.authResponse.accessToken;
 			         FB.api('/me/picture?type=large', function (response) {
-					    $('#fbPic').html("<h5>Here are your profile photo</h5><img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
+					    $('#fbPic').html("<img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
 			         });
 				 
 			         FB.api('/me', function (response) {
