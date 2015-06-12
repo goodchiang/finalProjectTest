@@ -42,7 +42,7 @@ function loginView(){
 	$('#loginView').show();
 	$('.notLogin').show();
 	$('#fbloginBtn').show();
-	$('#fbImgView').html('');
+	$('#fbPic').html('');
 	
 }
 
