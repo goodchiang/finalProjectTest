@@ -18,12 +18,7 @@ body{
 	color: white;
 	background: #696969;
 }
-.carousel{
-	max-width: 70vw;
-	max-height:60vw;
-	margin-bottom: 3em;
 
-}
 .pics img{
 	max-width:20vw;
 	margin: 2em;
