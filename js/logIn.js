@@ -41,6 +41,7 @@ function loginView(){
 	
 	$('#loginView').show();
 	$('.notLogin').show();
+	$('#fbloginBtn').show();
 	$('body').css("background-image","url(img/background.jpg)");
 	$('#fbImgView').html('');
 	
