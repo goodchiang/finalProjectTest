@@ -20,6 +20,26 @@ header p{
 	margin-right:45px;
 }
 
+#indexView{
+	margin:50px auto;
+	width:500px;
+	height:500px;
+	border-radius:15px;
+	background:rgba(255,255,255,0.8);
+}
+
+#fbImgView{
+	padding-top:25px;
+	margin:0 auto;
+	text-align:center;
+	width:300px;
+	height:300px;
+}
+
+#fbImgView img{
+	margin-top:5px;
+}
+
 #fbloginBtn{
 	float:right;
 	margin-right:45px;
