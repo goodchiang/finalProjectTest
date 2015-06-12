@@ -53,8 +53,8 @@ function indexView(){
 	
 	$('#indexView').show();
 	$('#logoutBtn').show();
-	$('body').css("background-image","url(img/index.jpg)");
-	//window.location = 'homepage.html' ;
+	//$('body').css("background-image","url(img/index.jpg)");
+	window.location = 'homepage.html' ;
 }
 
 function logout(){
