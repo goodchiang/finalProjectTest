@@ -8,7 +8,7 @@ $(document).ready(function(){
 			         uid = response.authResponse.userID;
 			         accessToken = response.authResponse.accessToken;
 			         FB.api('/me/picture?type=large', function (response) {
-					    $('#fbImgView').html("<h5>Here are your profile photo</h5><img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
+					    $('#fbPic').html("<h5>Here are your profile photo</h5><img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
 			         });
 				 
 			         FB.api('/me', function (response) {
@@ -42,7 +42,6 @@ function loginView(){
 	$('#loginView').show();
 	$('.notLogin').show();
 	$('#fbloginBtn').show();
-	//$('body').css("background-image","url(img/background.jpg)");
 	$('#fbImgView').html('');
 	
 }
@@ -54,7 +53,6 @@ function indexView(){
 
 	$('#indexView').show();
 	$('#logoutBtn').show();
-	//$('body').css("background-image","url(img/index.jpg)");
 }
 
 function logout(){
