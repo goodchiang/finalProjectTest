@@ -1,67 +1,27 @@
 <!DOCTYPE html>
-  <html>
-      <head class="col-md-4" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-          <meta property="og:type" content="article" />
-          <meta property="og:url" content="http://goodchiang.github.io/finalProjectTest/homepage.html" />
-          <meta property="og:title" content="Selfie With Me / NCCU Web Programming" />
-          <meta property="og:description" content="Facebook Open Graph Test" />
-          <meta property="og:image" content="http://goodchiang.github.io/finalProjectTest/img/img.png" />
-          <!--https://developers.facebook.com/docs/reference/opengraph/object-type/article-->
-          <meta charset="utf-8">
-          <title>來一起自拍！</title>
-          <meta name="viewport" content="width=device-width">
+<html>
+	<head>
+          <meta charset="UTF-8">
+          <title>Facebook api</title>						
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-          <link rel="stylesheet" href="css/index.css">
+          <link rel="stylesheet" href="css/reset.css">	
+          <link rel="stylesheet" href="css/main.css">
           <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-          <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
-          <script src="js/key.js"></script> 
-      </head>
-
-      <body>
-          <header>
-              <p class="notLogin">未登入</p>
-              <!-- <a id="loginBtn" href="logIn.html">登入</a> -->
-              <button id="fbloginBtn" class="btn btn-primary" type="submit">臉書登入</button>
-              <button id="logoutBtn" class="btn btn-danger">登出</button>
-
-              <a class="navbar-brand" href="index.html">來一起自拍</a>
-              <!--導覽列內容-->
-              <div class="collapse navbar-collapse" id="navbar">
-                   <ul class="nav navbar-nav">
-                      <li><div id="fbPic"></div></li>
-                      <li><a href="articles.html">Dashboard</a></li>
-                  </ul>                  
-              </div>
-              
-          </header>
-          <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
-          <article>
-              <section>
-                  <div class="col-md-10">
-                      <div class="pics-nav">
-                          <ul class="nav nav-tabs">
-                              <li role="presentation"><a href="#">最新</a></li>
-                              <li role="presentation"><a href="#">熱門</a></li>
-                              <li role="presentation"><a href="#">地點</a></li>
-                          </ul>
-                      </div>
-                      <div class="pics">
-                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
-                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
-                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
-                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
-                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
-                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
-                      </div>
-                  </div>       
-              </section>
-          </article>
-
-          <footer>
-              <div class="col-md-12 copyright"> Copyright © 2015 WebPrograming Group 1. All Rights Reserved.</div>
-          </footer>
+		  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+	</head>
+	
+	<body>
+	    <header><p class="notLogin">未登入</p><button id="logoutBtn" class="btn btn-danger">登出</button></header>	
+	    <article>
+			<div id="indexView">
+			   <div id="fbImgView"></div>
+		    </div>
+	    	<form id="loginView">
+				  <button id="fbloginBtn" class="btn btn-primary" type="submit">臉書登入</button>
+			</form>
+	    </article>	
 		
 		<script>
               //step1:https://www.parse.com/docs/js/guide#users-facebook-users
