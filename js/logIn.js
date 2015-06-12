@@ -49,7 +49,8 @@ function loginView(){
 function indexView(){
 	$('#loginView').hide();
 	$('.notLogin').hide();
-	
+	$('#fbloginBtn').hide();
+
 	$('#indexView').show();
 	$('#logoutBtn').show();
 	$('body').css("background-image","url(img/index.jpg)");
