@@ -10,7 +10,6 @@
           <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
           <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
-          <script src="js/keyNew.js"></script> 
     </head>
 
     <body>
@@ -58,6 +57,8 @@
         </article>
 
         <script>
+            Parse.initialize("3Ct29PJCet8L8kfhLvbLTJ3DLKRC61RAp7ysXFU6", "3yHxjy4EBgJTMWYBuP1T7rG4qOHiiOuAnokZB5jb");
+
             if (!Parse.User.current()){
                 alert("你尚未登入");
                 window.location = "index.html";
