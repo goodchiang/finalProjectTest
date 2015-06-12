@@ -16,6 +16,7 @@
           <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
           <link rel="stylesheet" href="css/homepage.css">
+          <link rel="stylesheet" href="css/main.css">
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
           <script src="js/key.js"></script> 
             <!--匯入結束-->
@@ -24,6 +25,11 @@
           <div class="logo col-md-4"></div>
 
       </head>
+
+      <header>
+          <p class="notLogin">未登入</p>
+          <button id="logoutBtn" class="btn btn-danger">登出</button>
+      </header>
 
       <!--導覽列-->
       <nav class="col-md-offset-4 col-md-8 navbar navbar-default"  role="navigation">
@@ -45,8 +51,6 @@
       		    </ul>
               <!--登入鍵-->
           	  <div class="joinbutton">
-                  <p class="notLogin">未登入</p>
-                  <button id="logoutBtn" class="btn btn-danger">登出</button>
           	 	    <a href="graphApi.html">登入</a>
           	  </div> 
               <!--Facebook-->
