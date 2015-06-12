@@ -29,10 +29,10 @@
                 </ul>                  
             </div>      
         </header>
-        
+
         <article>
             <div id="indexView">
-              <div id="fbImgView"></div>
+                <div id="fbImgView"></div>
             </div>
         </article>
 
@@ -49,19 +49,18 @@
               if(current){
                   var a = setTimeout(function(){
                   FB.getLoginStatus(function(response) {
-                       if (response.status === 'connected') {
-                           uid = response.authResponse.userID;
-                           accessToken = response.authResponse.accessToken;
-                           FB.api('/me/picture?type=large', function (response) {
-                          $('#fbImgView').html("<h5>Here are your profile photo</h5><img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
-                           });
+                      if (response.status === 'connected') {
+                          uid = response.authResponse.userID;
+                          accessToken = response.authResponse.accessToken;
+                          FB.api('/me/picture?type=large', function (response) {
+                             $('#fbImgView').html("<img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
+                             });
                      
-                           FB.api('/me', function (response) {
-                         console.log(response);
-                         $('#fbImgView').append("<h1>Welcome , "+(response['gender']=="male"?"Mr. ":"Miss ")+" "+response['first_name']+"</h1>");
-                           });
-                       
-                    }
+                          FB.api('/me', function (response) {
+                              console.log(response);
+                              $('#fbImgView').append("<h1>Welcome , "+(response['gender']=="male"?"Mr. ":"Miss ")+" "+response['first_name']+"</h1>");
+                          });
+                      }
                      });   
                   },3000);
                 indexView();
@@ -87,7 +86,6 @@
               $('#loginView').show();
               $('.notLogin').show();
               $('body').css("background-image","url(img/background.jpg)");
-              //window.location = 'homepage.html' ;
               $('#fbImgView').html('');
               
             }
@@ -99,7 +97,6 @@
               $('#indexView').show();
               $('#logoutBtn').show();
               $('body').css("background-image","url(img/index.jpg)");
-              //window.location = 'homepage.html' ;
             }
 
             function logout(){
@@ -108,7 +105,6 @@
                  // user is now logged out
                });
                loginView(); 
-               //window.location = 'homepage.html' ;
             }
 
         </script>
