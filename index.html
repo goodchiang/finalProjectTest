@@ -131,7 +131,7 @@
                   for (var i = 0 ; i < arrayOfQueriedObjects.length ; i++){
                     comment = arrayOfQueriedObjects[i] ;
             
-                    $("#pics").append(
+                    $("#pics").html(
                       "<blockquote>"+
                         comment.get("writer").get("username") + ": " +comment.get("message")+
                         "<br><img src='"+ comment.get("img").url()+"' height='100px'>"+  // Practice 6
