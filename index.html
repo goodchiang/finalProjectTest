@@ -127,7 +127,7 @@
 
 
               // Practice 4  只顯示目前使用者的留言
-             // queryComments.equalTo("writer",Parse.User.current());
+              queryComments.equalTo("writer",Parse.User.all());
 
               // Practice 6  只抓取有圖片的留言
              // queryComments.exists("img");
