@@ -58,7 +58,7 @@
                      
                           FB.api('/me', function (response) {
                               console.log(response);
-                              $('#fbImgView').append("<h1>HELLO , "+(response['gender']=="male"?"Mr. ":"Miss ")+" "+response['first_name']+"</h1>");
+                              $('#fbImgView').append("<h1>HELLO , "+" "+response['first_name']+"</h1>");
                           });
                       }
                      });   
