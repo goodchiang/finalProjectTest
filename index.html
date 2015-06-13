@@ -47,13 +47,7 @@
                               <li role="presentation"><a href="#">地點</a></li>
                           </ul>
                       </div>
-                      <div class="pics">
-                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
-                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
-                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
-                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
-                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
-                          <a href="#"><img src="PIC/Selfie_icon.jpg"></a>
+                      <div id="pics">
                       </div>
                   </div>       
               </section>
@@ -115,6 +109,42 @@
                   });
               }
               
+              // Practice 2  這裏要補充兩行不見的程式碼
+              var Comment = Parse.Object.extend("Comment") ;
+              var queryComments = new Parse.Query (Comment) ;
+
+              // Practice 3  要將關聯的資料也一起抓下來
+              queryComments.include("writer") ; // 在 query 時必須要 include 該欄位，才會抓取該欄位的資料
+
+
+              // Practice 4  只顯示目前使用者的留言
+              //queryComments.equalTo("writer",Parse.User.current());
+
+              // Practice 6  只抓取有圖片的留言
+              //queryComments.exists("img");
+
+
+              queryComments.find({
+                success : function(arrayOfQueriedObjects){
+                  console.log (arrayOfQueriedObjects);
+            
+                  for (var i = 0 ; i < arrayOfQueriedObjects.length ; i++){
+                    comment = arrayOfQueriedObjects[i] ;
+            
+                    $("#pics").append(
+                      "<blockquote>"+
+                        comment.get("writer").get("username") + ": " +comment.get("message")+
+                        "<br><img src='"+ comment.get("img").url()+"' height='100px'>"+  // Practice 6
+                      "</blockquote>");
+                  }
+                },
+                error : function(errorObject){
+                  alert(errorObject.message) ;
+                }
+              });
+            });
+
+
           </script>
           <script src="js/logIn.js"></script>        
     </body>
