@@ -112,8 +112,14 @@
                   });
               }
               
+              $(document).ready(function(){
+              console.log(Parse.User.current());
+              if (Parse.User.current()){
+                $("#name").text(Parse.User.current().get("username"));
+              }
+            
               // Practice 2  這裏要補充兩行不見的程式碼
-              //var Comment = Parse.Object.extend("Comment") ;
+              var Comment = Parse.Object.extend("Comment") ;
               var queryComments = new Parse.Query (Comment) ;
 
               // Practice 3  要將關聯的資料也一起抓下來
@@ -145,6 +151,7 @@
                   alert(errorObject.message) ;
                 }
               });
+            });
 
 
           </script>
