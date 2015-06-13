@@ -47,7 +47,10 @@
                               <li role="presentation"><a href="#">地點</a></li>
                           </ul>
                       </div>
-                      <div id="pics">
+                      <div id="comments">
+                          <blockquote>
+                                <p>TEST: TEST TEST</p>
+                          </blockquote>
                       </div>
                   </div>       
               </section>
@@ -131,7 +134,7 @@
                   for (var i = 0 ; i < arrayOfQueriedObjects.length ; i++){
                     comment = arrayOfQueriedObjects[i] ;
             
-                    $("#pics").html(
+                    $("#comments").append(
                       "<blockquote>"+
                         comment.get("writer").get("username") + ": " +comment.get("message")+
                         "<br><img src='"+ comment.get("img").url()+"' height='100px'>"+  // Practice 6
