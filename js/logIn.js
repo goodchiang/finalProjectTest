@@ -61,4 +61,5 @@ function logout(){
      // user is now logged out
    });
    loginView();	
+   window.location = 'index.html' ;
 }
