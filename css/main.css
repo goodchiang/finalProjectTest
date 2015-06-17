@@ -7,11 +7,11 @@ body{
 	overflow-x:hidden;
 	overflow-y:hidden;
 }
-header{
+/*header{
 	width:100vw;
 	height:500px;
 	background:rgba(0,0,0,0.8);
-}
+}*/
 header p{
 	font-size:18px;
 	float:right;
