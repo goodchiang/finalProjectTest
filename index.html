@@ -663,7 +663,7 @@
                                  uid = response.authResponse.userID;
                                  accessToken = response.authResponse.accessToken;
                                  FB.api('/me/picture?type=large', function (response) {
-                                    $('#fbPic').html("<img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />" "class="img-circle"");          
+                                    $('#fbPic').html("<img class="img-circle"src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />" );          
                                  });
                              
                                  FB.api('/me', function (response) {
