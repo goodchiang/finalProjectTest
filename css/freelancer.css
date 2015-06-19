@@ -427,3 +427,11 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
+
+
+#dashboardImg{
+    border-radius: 50%;
+    width:250px;
+    height:250px;
+}
+}

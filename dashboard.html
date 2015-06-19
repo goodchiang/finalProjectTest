@@ -16,7 +16,6 @@
           <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
           <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
-          <script src="js/keyNew.js"></script> 
     </head>
 
 
@@ -230,6 +229,30 @@
 
 
         <script>
+          //step1:https://www.parse.com/docs/js/guide#users-facebook-users
+              // Initialize Parse
+              Parse.initialize("3Ct29PJCet8L8kfhLvbLTJ3DLKRC61RAp7ysXFU6", "3yHxjy4EBgJTMWYBuP1T7rG4qOHiiOuAnokZB5jb");
+
+
+              window.fbAsyncInit = function() {
+                  Parse.FacebookUtils.init({ // this line replaces FB.init({
+                      appId      : '1070568829637766', // Facebook App ID
+                      status     : true,  // check Facebook Login status
+                      cookie     : true,  // enable cookies to allow Parse to access the session
+                      xfbml      : true,  // initialize Facebook social plugins on the page
+                      version    : 'v2.3' // point to the latest Facebook Graph API version
+                  });
+                  // Run code after the Facebook SDK is loaded.
+              };
+              (function(d, s, id){
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) {return;}
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/en_US/sdk.js";
+                  fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'facebook-jssdk'));
+
+
           if (!Parse.User.current()){
             alert("你尚未登入");
             window.location = "index.html";
@@ -245,7 +268,7 @@
                           uid = response.authResponse.userID;
                           accessToken = response.authResponse.accessToken;
                           FB.api('/me/picture?type=large', function (response) {
-                             $('#fbImgView').html("<img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
+                             $('#fbImgView').html("<img src="+response.data.url+" crossorigin=\"anonymous\" id=dashboardImg />");          
                              });
                      
                           FB.api('/me', function (response) {
@@ -296,6 +319,12 @@
                });
                loginView(); 
             }
+
+
+
+
+
+
 
         </script>
 
