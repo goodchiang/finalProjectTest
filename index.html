@@ -682,6 +682,7 @@
             $(document).on('click','#logoutBtn',function(e){
                 e.preventDefault();
                 logout();
+                window.location = 'index.html' ;
             });
 
             function loginView(){
@@ -706,9 +707,7 @@
                FB.logout(function(response) {
                  // user is now logged out
                });
-               window.location = 'index.html' ;
                loginView(); 
-               
             }
 
         </script>
