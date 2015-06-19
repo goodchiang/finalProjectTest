@@ -179,6 +179,14 @@ header .intro-text .skills {
     color: #d05148 ;
 }
 
+
+#fbPic{
+    border-radius: 50%;
+}
+
+
+
+
 section {
     padding: 100px 0;
 }
