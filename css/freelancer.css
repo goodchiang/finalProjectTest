@@ -180,8 +180,10 @@ header .intro-text .skills {
 }
 
 
-#fbPic{
+img #preview1{
     border-radius: 50%;
+    width:50px;
+    height:50px;
 }
 
 
