@@ -651,8 +651,6 @@
               });
 
 
-
-
               $(document).ready(function(){
                 var current = Parse.User.current();
                 console.log(current);
@@ -665,12 +663,6 @@
                                  FB.api('/me/picture?type=large', function (response) {
                                     $('#fbPic').html("<img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />" );          
                                  });
-                             
-                                 FB.api('/me', function (response) {
-                                     console.log(response);
-                                     $('#fbImgView').append("<h1>Welcome , "+(response['gender']=="male"?"Mr. ":"Miss ")+" "+response['first_name']+"</h1>");
-                                 });
-                                 
                           }
                          });   
                     },3000);
