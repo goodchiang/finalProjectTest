@@ -71,6 +71,9 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li >
+                            <div id="fbPic"></div>
+                        </li>
+                        <li >
                             <a id="dashboardBtn"href="dashboard.html">Dashboard</a>
                         </li>
                         <li>
@@ -571,7 +574,7 @@
 
 
         <script type="text/javascript">
-        
+
             //step1:https://www.parse.com/docs/js/guide#users-facebook-users
               // Initialize Parse
               Parse.initialize("3Ct29PJCet8L8kfhLvbLTJ3DLKRC61RAp7ysXFU6", "3yHxjy4EBgJTMWYBuP1T7rG4qOHiiOuAnokZB5jb");
@@ -660,7 +663,7 @@
                                  uid = response.authResponse.userID;
                                  accessToken = response.authResponse.accessToken;
                                  FB.api('/me/picture?type=large', function (response) {
-                                    $('#fbPic').html("<img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />");          
+                                    $('#fbPic').html("<img src="+response.data.url+" crossorigin=\"anonymous\" id=preview1 />" "class="img-circle"");          
                                  });
                              
                                  FB.api('/me', function (response) {
