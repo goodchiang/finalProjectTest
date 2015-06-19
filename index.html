@@ -682,7 +682,7 @@
             $(document).on('click','#logoutBtn',function(e){
                 e.preventDefault();
                 logout();
-                window.location = 'index.html' ;
+
             });
 
             function loginView(){
@@ -708,6 +708,7 @@
                  // user is now logged out
                });
                loginView(); 
+               window.location = 'index.html' ;
             }
 
         </script>
