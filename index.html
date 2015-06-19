@@ -572,6 +572,8 @@
             //step1:https://www.parse.com/docs/js/guide#users-facebook-users
               // Initialize Parse
               Parse.initialize("3Ct29PJCet8L8kfhLvbLTJ3DLKRC61RAp7ysXFU6", "3yHxjy4EBgJTMWYBuP1T7rG4qOHiiOuAnokZB5jb");
+
+
               window.fbAsyncInit = function() {
                   Parse.FacebookUtils.init({ // this line replaces FB.init({
                       appId      : '1070568829637766', // Facebook App ID
@@ -600,7 +602,9 @@
                           } else {
                               alert("透過臉書登入成功");
                           }
+
                           indexView();//切換至預先寫好登入後的介面
+
                           FB.getLoginStatus(function(response) {
                               if (response.status === 'connected') {
                                   FB.api('/me/picture?type=large', function (response) {
@@ -671,41 +675,41 @@
                 }
             });
 
-$(document).on('click','#loginBtn',function(e){
-    e.preventDefault();
-    fblogin();
-});
-$(document).on('click','#logoutBtn',function(e){
-    e.preventDefault();
-    logout();
-});
+            $(document).on('click','#loginBtn',function(e){
+                e.preventDefault();
+                fblogin();
+            });
+            
+            $(document).on('click','#logoutBtn',function(e){
+                e.preventDefault();
+                logout();
+            });
 
-function loginView(){
-    $('#logoutBtn').hide();
-    $('#indexView').hide();
-    $('#dashboardBtn').hide();
-    $('#loginView').show();
-    $('#loginBtn').show();
-    $('#fbPic').html('');
-    
-}
+            function loginView(){
+                $('#logoutBtn').hide();
+                $('#indexView').hide();
+                $('#dashboardBtn').hide();
+                $('#loginView').show();
+                $('#loginBtn').show();
+                $('#fbPic').html('');
+            }
 
-function indexView(){
-    $('#loginView').hide();
-    $('#loginBtn').hide();
-    $('#dashboardBtn').show();
-    $('#indexView').show();
-    $('#logoutBtn').show();
-}
+            function indexView(){
+                $('#loginView').hide();
+                $('#loginBtn').hide();
+                $('#dashboardBtn').show();
+                $('#indexView').show();
+                $('#logoutBtn').show();
+            }
 
-function logout(){
-   Parse.User.logOut();
-   FB.logout(function(response) {
-     // user is now logged out
-   });
-   loginView(); 
-   window.location = 'index.html' ;
-}
+            function logout(){
+               Parse.User.logOut();
+               FB.logout(function(response) {
+                 // user is now logged out
+               });
+               loginView(); 
+               window.location = 'index.html' ;
+            }
 
         </script>
 
